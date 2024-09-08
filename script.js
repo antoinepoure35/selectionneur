@@ -11,6 +11,18 @@
 		'3B': ["B.Mathis", "C.Louis", "C.Maxence", "D.Maxime", "E.Salomé", "F.Laureline", "F.Eden", "F.Sacha", "F.Pol", "G.Esteban", "G.Victor", "J.Elouan", "J.Candice", "J.Emma", "K.Benjamin", "K.Daniel", "L.Jawad", "M.Timothé", "M.Baptiste", "M.Noé", "M.Léandro", "M.Athénaïs", "M.Anaïs", "O.Nadiia", "P.Eline", "S.Maëllys", "S.Maëlan", "T.Louis"]
     };
 	
+	let taillesDesClasses = {};
+	for (let classe in classes) {
+		taillesDesClasses[classe] = classes[classe].length;
+	}
+
+	let result = "Nombres d'élèves par classe : ";
+	for (let classe in taillesDesClasses) {
+		result += `${classe}(${taillesDesClasses[classe]})   `;
+	}
+
+	document.getElementById('tailleDesClasses').innerHTML = result;
+	
 document.getElementById('classeForm').addEventListener('submit', function(event) {
     event.preventDefault();
 

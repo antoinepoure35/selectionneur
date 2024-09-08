@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélectionneur d'élève</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sélectionneur d'élève</h1>
+	<!-- <h2 id="listeDynamique"></h2> -->
+    <form id="classeForm">
+        <label for="classe">Classe :</label>
+        <select id="classe" name="classe">
+            <option value="6A">6A</option>
+            <option value="6B">6B</option>
+            <option value="6C">6C</option>
+			<option value="5A">5A</option>
+			<option value="5B">5B</option>
+			<option value="5C">5C</option>
+			<option value="4A">4A</option>
+			<option value="4B">4B</option>
+			<option value="3A">3A</option>
+			<option value="3B">3B</option>
+        </select>
+        <label for="nombre">Nombre d'élèves :</label>
+        <input type="number" id="nombre" name="nombre" min="0" required>
+		<button style="width: 240px;" id="choisirDesEleves" type="submit">Choisir plusieurs élèves</button>
+        <!-- <button type="submit">Envoyer</button> -->
+    </form>
+    <button style="margin-top: 10px; width: 240px;" id="choisirUnEleveAvecRemise">Choisir un élève</button>
+	<!-- <button style="margin-top: 10px;" id="choisirUnEleveSansRemise">Choisir un élève (sans remise)</button> -->
+    <div id="resultat"></div>
+    <script src="script.js"></script>
+</body>
+</html>
